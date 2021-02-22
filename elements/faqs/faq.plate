@@ -1,0 +1,23 @@
+
+<div class="accordion" id="faq">
+    <div class="wrapper">
+        {% assign count = 0 %}
+        {% for faq in faq.faq %}
+            <div class="card">
+                <div class="card-header" id="{{count}}" data-toggle="collapse" data-target="#faq-{{count}}" aria-expanded="false" aria-controls="collapseOne"> 
+                    <button class="btn btn-link" type="button" >
+                        <div class="title">{{ faq.question }}</div><div class="icon"><i class="fa"></i></div>
+                    </button>
+                </div>
+
+                <div id="faq-{{count}}" class="collapse content" aria-labelledby="headingOne" data-parent="#faq">
+                    <div class="card-body">
+                        {{ faq.answer }}
+                    </div>
+                </div>	
+            </div>
+        {% assign count = count | plus: 1 %}
+        {% endfor %}
+    </div>
+</div>
+      

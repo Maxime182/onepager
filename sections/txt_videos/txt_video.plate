@@ -1,0 +1,26 @@
+{% content_for section %}
+<section class="txt_video" id="concept">
+    <div class="plate--container">
+        <div class="row">
+         <div class="bg"></div>
+            <div class="col-4">
+                <div class="content d-flex align-items-start flex-column h-100">
+                    {{section.vid_title}}
+                    <div class="desc"> {{section.vid_desc}}</div>
+                </div>
+            </div>
+            <div class="col-7 offset-1 d-flex align-items-center">
+                <div class="med-wrapper">
+                    <img src="{{section.vid_video.src}}" alt="{{section.vid_video.alt}}" />
+                    <div class="play">
+                        <svg width="60" height="70" xmlns="http://www.w3.org/2000/svg">
+                            <g><rect fill="none" id="canvas_background" height="62" width="72" y="-1" x="-1"/></g>
+                            <g><path stroke="#ffffff" transform="rotate(90 27.238727569580075,36.58332824707032) " id="svg_2" d="m-6.81707,62.40856l34.05581,-51.65047l34.05579,51.65047l-68.1116,0z" opacity="undefined" fill-opacity="null" stroke-dasharray="null" stroke-width="null" fill="#fff"/></g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endcontent_for %}

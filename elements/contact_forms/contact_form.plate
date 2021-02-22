@@ -1,0 +1,8 @@
+{% include "elements/contact_forms/_form_errors" %}
+
+{% form for: contact_form, to: contact_form.email, success_url: contact_form.success_page_link %}
+  {% for field in contact_form.field_lines %}
+    {% include "elements/contact_forms/_form_field", form_field: field %}
+  {% endfor %}
+  <div><input type="submit" value="{{contact_form.send_btn}}"></div>
+{% endform %}

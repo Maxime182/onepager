@@ -1,0 +1,14 @@
+{% if form_field.type == "checkbox" %}
+    <div class="input_field" id="input_field">
+        <p>
+            <label>{{ form_field.name | form_input_name | html_input: form_field.type, placeholder: form_field.name }}{{ form_field.name }}</label>
+        </p>
+    </div>
+{% else %}
+  <div>
+    <p>
+      {{ form_field.name | form_input_name | html_input: form_field.type, placeholder: form_field.name}}
+    </p>
+  </div>
+{% endif %}
+{% register_form_field form_field.name, required: form_field.required %}

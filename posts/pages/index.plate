@@ -1,0 +1,3 @@
+{% content_for page %}
+  {% render_content %}
+{% endcontent_for %}

@@ -1,0 +1,10 @@
+<li class="{% if request.path == menu_item.link %}active{% endif %}">
+  <a href="{{ menu_item.link }}">{{ menu_item.name }}</a>
+  {% if menu_item.sub_menu_items.first %}
+    <ul class="{{ sub_menu_class }}">
+      {% for sub_menu_item in menu_item.sub_menu_items %}
+        {% include sub_menu_item %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</li>

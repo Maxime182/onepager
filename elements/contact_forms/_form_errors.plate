@@ -1,0 +1,13 @@
+{% if request.flash.alert %}
+  <p style="color:red;">
+    {{ request.flash.alert }}
+  </p>
+  <ul style="color:red;">
+    {% for error_msg in request.flash.errors %}
+      <li>{{ error_msg }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+{% if request.flash.notice %}
+  <p style="color:green;">{{ request.flash.notice }}</p>
+{% endif %}

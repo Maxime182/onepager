@@ -1,0 +1,5 @@
+<ul>
+  {% for menu_item in menu.menu_items %}
+    {% include menu_item %}
+  {% endfor %}
+</ul>

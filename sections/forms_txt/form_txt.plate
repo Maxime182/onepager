@@ -1,0 +1,21 @@
+{% content_for section %}
+<section class="form_txt">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="content">
+                    <h2 class="form_title"> {{section.form_title}}</h2>
+                    {% render_content %}
+                </div>
+            </div>
+            <div class="col-5 offset-1">
+                <h2 class="title">{{section.txt_title}}</h2>
+                <div class="desc">
+                    <div class="bg"></div>
+                    {{section.txt_desc}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endcontent_for %}

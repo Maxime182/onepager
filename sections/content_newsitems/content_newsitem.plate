@@ -1,0 +1,27 @@
+{% content_for section %}
+<section class="newsitems" id="actueel">
+    {% include "includes/owl_nav" %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4 offset-1">
+                {% render_content %}
+            </div>
+            <div class="col-6 offset-1">
+                <h2 class="title">{{section.car_title}}</h2>
+                <div class="owl-carousel owl-theme owlNews">
+                {% for item in section.news_items %}
+                    <div class="item">
+                        <div class="img-wrapper" style="background-image: url('{{item.item_img.src}}');" />
+                        </div>
+                        <div class="content">
+                            <h2>{{item.item_title}}</h2>
+                            <div class="desc">{{item.item_desc}}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endcontent_for %}

@@ -1,0 +1,3 @@
+{% content_for section %}
+  {% render_content %}
+{% endcontent_for %}

@@ -1,0 +1,12 @@
+<div class="owl-carousel owl-theme owlNews">
+   {% for item in news_item.news_items %}
+      <div class="item">
+         <div class="img-wrapper" style="background-image: url('{{item.item_img.src}}');" />
+         </div>
+         <div class="content">
+            <h2>{{item.item_title}}</h2>
+            <div class="desc">{{item.item_desc}}</div>
+         </div>
+      </div>
+   {% endfor %}
+</div>

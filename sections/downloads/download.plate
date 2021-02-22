@@ -1,0 +1,36 @@
+{% content_for section %}
+ <section class="downloads pattern" id="downloads">
+    {% include "includes/owl_nav" %}
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Downloads</h2>
+                </div>
+                <div class="col-12">
+                    <div class="owl-carousel owl-theme owlDownloads">
+                        {% for download in section.downloads %}
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="img-wrapper"> 
+                                            <div class="img" style="background-image: url('{{download.post_img.src}}');"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-7 d-flex align-items-center">
+                                        <div class="content">
+                                            <h3>{{download.post_title}}</h3>
+                                            <div class="desc">{{download.post_desc}}</div>
+                                            <a class="file" href="{{download.post_file.src}}">Download</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endcontent_for %}
